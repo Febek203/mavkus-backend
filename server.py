@@ -54,13 +54,8 @@ app = FastAPI(
 # CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:3000",
-        "http://localhost:3001",
-        "https://mavkus-frontend-eta.vercel.app",
-        "https://mavkus-frontend.vercel.app",
-    ],
-    allow_credentials=False,  # ✅ IMPORTANTE
+    allow_origins=["*"],   # ✅ ora puoi
+    allow_credentials=False,  # ✅ IMPORTANTISSIMO
     allow_methods=["*"],
     allow_headers=["*"],
 )
